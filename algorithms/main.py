@@ -22,8 +22,8 @@ def main():
     # print(fast_fourier_transform.compute_fourier_naive([1,-1,1,-1]))
 
     # # Dynamic Programming | Memoization
-    length = 14
-    table = [[3, 1.80], [4, 2]]
+    length = 15
+    table = [[3, 1.5], [4, 2]]
     mem = [None] * (length + 1)
     print(f'max value: {rod_cutter.max_revenue(length=length, table=table, mem=mem)}')
 

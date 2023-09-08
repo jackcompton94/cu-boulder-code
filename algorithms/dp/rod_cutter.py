@@ -9,9 +9,11 @@ def max_revenue(length, table, mem):
     if mem[length] is not None:
         return mem[length]
 
+    # Used to keep track of the maximum revenue found during recursive calls
     max_so_far = 0
     best_decision = []
 
+    # Iterate through the price table for each subsequent length
     for li, pi in table:
         revenue, decision = max_revenue(length - li, table, mem)
         revenue += pi
