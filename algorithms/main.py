@@ -1,5 +1,5 @@
 from mathematics import fast_fourier_transform
-from dp import rod_cutter, coin_changer
+from dp import rod_cutter, coin_changer, knapsack
 
 
 def main():
@@ -22,15 +22,20 @@ def main():
     # print(fast_fourier_transform.compute_fourier_naive([1,-1,1,-1]))
 
     # # Dynamic Programming | Memoization
-    length = 15
-    table = [[3, 1.5], [4, 2]]
-    mem = [None] * (length + 1)
-    print(f'max value: {rod_cutter.max_revenue(length=length, table=table, mem=mem)}')
-
-    target = 8
-    coins = [25, 10, 5, 1]
-    mem = [None] * (target + 1)
-    print(f'best change: {coin_changer.make_change(target, coins, mem)}')
+    # length = 15
+    # table = [[3, 1.5], [4, 2]]
+    # mem = [None] * (length + 1)
+    # print(f'max value: {rod_cutter.max_revenue(length=length, table=table, mem=mem)}')
+    #
+    # target = 8
+    # coins = [25, 10, 5, 1]
+    # mem = [None] * (target + 1)
+    # print(f'best change: {coin_changer.make_change(target, coins, mem)}')
+    #
+    limit = 200
+    weights = [1, 5, 20, 35, 90]
+    values = [15, 14.5, 19.2, 19.8, 195.2]
+    print(knapsack.load_knapsack(limit, 0, weights, values))
 
 
 if __name__ == '__main__':
