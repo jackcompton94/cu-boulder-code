@@ -32,10 +32,12 @@ def main():
     # mem = [None] * (target + 1)
     # print(f'best change: {coin_changer.make_change(target, coins, mem)}')
     #
-    limit = 200
-    weights = [1, 5, 20, 35, 90]
-    values = [15, 14.5, 19.2, 19.8, 195.2]
-    print(knapsack.load_knapsack(limit, 0, weights, values))
+    capacity = 100
+    weights = [1, 5, 10, 35, 90]
+    values = [15, 11, 30, 20, 195]
+    # Initialize a memoize table with len(weights)+1 rows and capacity+1 columns
+    mem = [[None] * (capacity + 1) for _ in range(len(weights)+1)]
+    print(f'max value: {knapsack.load_knapsack(0, capacity, weights, values, mem)}')
 
 
 if __name__ == '__main__':
