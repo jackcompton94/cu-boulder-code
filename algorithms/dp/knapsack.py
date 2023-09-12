@@ -8,7 +8,7 @@ def load_knapsack(i, capacity, weights, values, mem):
         return 0, []
     # Added more items to knapsack than its original capacity
     if capacity < 0:
-        return -float('inf'), []  # Return negative infinity and an empty list
+        return -float('inf'), []
     # Reached the end of possible items
     if i >= len(weights):
         return 0, []
