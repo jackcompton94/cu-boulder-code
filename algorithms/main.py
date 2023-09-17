@@ -47,8 +47,8 @@ def main():
     # mem = [[None] * (len(s2) + 1) for _ in range(len(s1) + 1)]
     # print(f'longest common subsequence: {dynamic.common_subsequence.lcs(s1, s2, 0, 0, mem)}')
 
-    coins = [25, 10, 5, 1]
-    change = 69
+    coins = [10, 5, 2, 1]
+    change = 18
     print(coin_changer.make_change(coins, change))
 
 
