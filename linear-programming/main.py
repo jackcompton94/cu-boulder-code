@@ -89,8 +89,6 @@ from vertex_cover.vertex_cover import *
 # else:
 #     print(LpStatus[prob.status])
 
-
-
 n = 13
 edge_list = [
     [1,2],
